@@ -2,14 +2,7 @@ package barManagement;
 import java.util.ArrayList;
 public class MixedDrink extends Drink implements MixedDrinkRecipe
 {
-    //each drink should have max of 1.5 oz liquor
-    //rocks drink should be 2.0 oz liquor
-    //17 shots per bottle
-
-    //Recipe recipe;
-    //Garnish garnish;
-
-    //Drinks may have more than one liquor and mixer
+	   //Drinks may have more than one liquor and mixer
     private ArrayList<Liquor> liquor;
     private ArrayList<NonAlcoholic> mixer;
     private GarnishStrategy garnish;
@@ -40,10 +33,7 @@ public class MixedDrink extends Drink implements MixedDrinkRecipe
 
     //don't need other methods they are in main interface
 
-    //buildPrice
-    public double getPrice(){
-        return getPrice();
-    }
+
 
     //buildLiquor
     public void setLiquor(Liquor newLiquor){

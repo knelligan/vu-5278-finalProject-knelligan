@@ -20,7 +20,7 @@ public class RedWine extends Wine
         setPrice(12.00);
         setName(name);
         setType("Red Wine");
-        setMenuListing("Red Wine");
+
     }
 
     /**

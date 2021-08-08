@@ -14,7 +14,6 @@ import javax.swing.event.*;
 public abstract class Drink{
     // drink info
     private String name;
-    private String menuName;
     private String type;
     private double size;
     private double price;
@@ -57,14 +56,6 @@ public abstract class Drink{
 
     public void setName(String newName){
         name = newName;   
-    }
-
-    public String getMenuListing(){
-        return menuName;   
-    }
-
-    public void setMenuListing(String newMenuName){
-        menuName = menuName;   
     }
 
     public double getPrice(){

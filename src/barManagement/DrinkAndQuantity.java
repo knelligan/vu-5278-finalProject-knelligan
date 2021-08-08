@@ -25,7 +25,7 @@ public class DrinkAndQuantity{
         return drink;
     }
 
-    public Integer getQuantity(Integer newQuantity){
+    public Integer getQuantity(){
         return quantity;
     }
 
@@ -44,4 +44,3 @@ public class DrinkAndQuantity{
 
     }
 }
-

@@ -3,6 +3,7 @@ package barManagement;
 public class BottleBeer extends Beer
 {
 
+
     /**
      * Constructor for objects of class Wine
      */
@@ -17,14 +18,14 @@ public class BottleBeer extends Beer
     /**
      * Constructor for objects of class DraftBeer
      */
-    public BottleBeer(String newName, String newMenuName, String prodName, double newPrice)
+    public BottleBeer(String newName, String prodName, double newPrice)
     {
         super(newName);
         setType("Bottle Beer");
         setPrice(newPrice);
         setSize(12);
         productName = prodName;
-        setMenuListing(newMenuName);
+
     }
 
     /**

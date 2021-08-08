@@ -18,7 +18,7 @@ public class Wine extends Drink
         super(name);
         setType("Wine");
         setSize(5.0);
-        setMenuListing(name);
+
     }
 
     /**

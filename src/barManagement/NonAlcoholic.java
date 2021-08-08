@@ -24,7 +24,7 @@ public class NonAlcoholic extends Drink
         glassType = new Pint();
         iceType = new Cube();
         setPrice(newPrice);
-        setMenuListing(newMenuName);
+
     }
 
     /**

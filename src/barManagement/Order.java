@@ -20,6 +20,7 @@ public class Order
     private Date date;
     private ArrayList<DrinkAndQuantity> drinksAndQuantities;
     private static DrinkFactory df;
+    private Double totalPrice;
     /**
      * Constructor for objects of class Order
      */
@@ -32,6 +33,7 @@ public class Order
         this.date = date;
         drinksAndQuantities = new ArrayList();
         pourDrinks(drinkList, quantities);
+        totalPrice = getTotalPrice();
     }
 
     /**
@@ -118,7 +120,26 @@ public class Order
         for(DrinkAndQuantity d : drinksAndQuantities){
             str += d.toString();
         }
+        
+        str += "total: " + totalPrice;
         return str;
     }
-}
+    
+        /**
+     * Method returns all of the drinks from the order
+     *
+     * @return The list of drinks ordered
+     */
 
+    public Double getTotalPrice()
+    {
+        Double total = 0.0;
+        for(DrinkAndQuantity d : drinksAndQuantities){
+            Drink drink = d.getDrink();
+            double tempPrice = drink.getPrice();
+            Integer quantity = d.getQuantity();
+            total += (tempPrice * quantity);
+        }
+        return total;
+    }
+}
