@@ -1,5 +1,5 @@
 Item,Type,OzPerStockUnit,StockCost,CostPerOz,TotalOzOnHand
-White wine, Wine, 30, 6, 0.2, 300.0
+White wine, Wine, 30, 6, 0.2, 290.0
 Red wine, Wine, 30, 9, 0.3, 385.0
 Bud Light, Bottled Beer, 12, 1, 0.08, 4320.0
 Corona, Bottled Beer, 12, 1.1, 0.09, 3600.0

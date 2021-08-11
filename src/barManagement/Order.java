@@ -196,33 +196,36 @@ public class Order
     public String toString()
     {
         String str = "";
-        str += "ord: " + orderNum + ",  ";
-        str += "emp: " + bartenderName + ",  " + "cust: " + customerName + ",  ";
-        str += "date: " + date + ", " + "drinks: ";
+        str += "\n********* Receipt *********\n";
+        str += "Order Number: " + orderNum + "\nDate: " + date + "\n";
+        str += "Bartender: " + bartenderName + ",  " + "Customer: " + customerName + "\n";
+        str += "Drinks: ";
 
         for(DrinkAndQuantity d : drinksAndQuantities){
-            str += d.toString();
+            str += d.toString() + ", ";
         }
-
-        //str = str.substring(0, str.length() - 2);
+        str = str.substring(0, str.length() - 2);
         
         //get payment info
         String payValue = "";
         String payType = "";
         if(paid){
-            payValue = " yes ";
+            payValue = " Yes,";
             payType = paymentType;
         }else{
-            payValue = " no ";
+            payValue = " No,";
             payType = paymentType;
         }
-        str += ", payment: " + payValue + " " + paymentType;
+        
+        str += "\n";
+        str += "Paid: " + payValue + " " + paymentType;
         
         //get price
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         String totalCurrency = formatter.format(totalPrice);
-
-        str += ", total: " + totalCurrency;
+        str += "\n";
+        str += "Total: " + totalCurrency;
+        str += "\n***************************\n";
         return str;
     }
 

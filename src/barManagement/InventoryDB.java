@@ -207,7 +207,7 @@ public class InventoryDB {
 
         //code to test
         double currentQuantity  = quantity.get(name);
-        System.out.println(name + " on hand: " + currentQuantity + "oz.");
+        //System.out.println(name + " on hand: " + currentQuantity + "oz.");
         return currentQuantity;
     }
 
@@ -237,7 +237,7 @@ public class InventoryDB {
      */
     public boolean updateQuantity(String name, double amount){
         //print test before
-        System.out.println("before updated");
+        //System.out.println("before updated");
         getCurrentQuantity(name);
 
         boolean enough = false;
@@ -255,7 +255,7 @@ public class InventoryDB {
             updateOutOfStock(name, false);
         }
 
-        System.out.println("after updated");
+        //System.out.println("after updated");
         getCurrentQuantity(name);
 
         //overwrite inventory csv file
