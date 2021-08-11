@@ -295,6 +295,7 @@ public class InventoryDB {
     public void writeInventoryFile() {
         PrintWriter pw = null;
         try {
+        	//this is set to a different filename/directory, but should simply overwrite inventory.csv
             pw = new PrintWriter(new File("inventory2.csv"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
