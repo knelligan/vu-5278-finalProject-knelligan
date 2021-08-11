@@ -104,42 +104,41 @@ public class ProcessOrders implements Runnable, ActionListener, ItemListener{
         //Fields relating to selected order-------------------------------
         // the orderNum (required field)--------------------------------------
         JPanel ordNumPanel = new JPanel();       
-        ordNumPanel.add(new JLabel("Order Number:     "));
+        ordNumPanel.add(new JLabel("Order Number:      "));
         tfOrderNumber = new JTextField("", 20);
-        //tfOrderNumber.setText("" + (orderDB.getSize() + 1));
+        tfOrderNumber.setEditable(false);
         ordNumPanel.add(tfOrderNumber);
         orderPanel.add(ordNumPanel);
 
         // the bartender's name (required field)--------------------------------------
         JPanel bartenderPanel = new JPanel();
-        bartenderPanel.add(new JLabel("Bartender Name: "));
+        bartenderPanel.add(new JLabel("Bartender Name:   "));
         tfBartenderName = new JTextField("", 20);
+        tfBartenderName.setEditable(false);
         bartenderPanel.add(tfBartenderName);
         orderPanel.add(bartenderPanel);
 
         // the customer's name (required field)--------------------------------------
         JPanel customerPanel = new JPanel();
-        customerPanel.add(new JLabel("Customer Name: "));
+        customerPanel.add(new JLabel("Customer Name:   "));
         tfCustomerName = new JTextField("", 20);
+        tfCustomerName.setEditable(false);
         customerPanel.add(tfCustomerName);
         orderPanel.add(customerPanel);
 
         // the current date--------------------------------------
         JPanel datePanel = new JPanel();
-        datePanel.add(new JLabel("Date:            "));
+        datePanel.add(new JLabel("Date:                      "));
         tfDateField = new JTextField("", 20);
+        tfDateField.setEditable(false);
         datePanel.add(tfDateField);
         orderPanel.add(datePanel);
 
-        // //get current date time with Date()--------------------------------------
-        // DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-        // Date date = new Date();
-        // tfDateField.setText(dateFormat.format(date));
-
         // the current date
         JPanel pricePanel = new JPanel();
-        pricePanel.add(new JLabel("Price:           "));
+        pricePanel.add(new JLabel("Price:                     "));
         tfPrice = new JTextField("", 20);
+        tfPrice.setEditable(false);
         pricePanel.add(tfPrice);
         orderPanel.add(pricePanel);
 
