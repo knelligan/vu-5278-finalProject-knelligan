@@ -1,7 +1,6 @@
 package barManagement;
 
 import java.util.ArrayList;
-import java.time.LocalDate;
 import java.util.Date;
 import java.text.NumberFormat;
 /**
@@ -130,9 +129,8 @@ public class Order
     }
 
     /**
-     * Method returns the customer name
+     * Method gets the customer name
      *
-     * @return The customer name
      */
     public String getBartenderName()
     {
@@ -190,7 +188,7 @@ public class Order
     }
 
     /**
-     * Method returns all of the drinks from the order
+     * Method returns a string with order information
      *
      * @return The list of drinks ordered
      */

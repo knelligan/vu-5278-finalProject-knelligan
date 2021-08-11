@@ -28,7 +28,7 @@ public class InventoryDB {
     private static final int COST_PER_OZ = 4;
     private static final int ON_HAND = 5;
 
-    //separate file for prices
+    //Separate file for prices of menu items
     private static final int MENU_PRICE = 1;
     /**
      * Constructor for objects of class Inventory
@@ -68,16 +68,6 @@ public class InventoryDB {
     public void readInventory(){
         String line = "";  
         String splitBy = ",";  
-        String item = "Item";
-        String type = "Type";
-        String stockSize = "OzPerStockUnit";
-        String stockCost = "StockCost";
-        String costPerOz = "CostPerOz";
-        String onHand = "TotalOzOnHand";
-        String menuPrice = "ExtendedPrice";
-
-        int row = 0;
-        int col = 0;
 
         try   
         {  
@@ -86,12 +76,10 @@ public class InventoryDB {
             while ((line = br.readLine()) != null)   
             {  
                 String[] currentRow = line.split(splitBy); 
-                String itemName = currentRow[ITEM];
 
                 if(!currentRow[ITEM].equals("") && !currentRow[ITEM].contains("Item")){
                     if(!currentRow[ON_HAND].equals("")){
                         //creates quantity node for selected item
-                        String test= (currentRow[ON_HAND]);
                         double quantityConvert = Double.parseDouble(currentRow[ON_HAND]);
                         insertQuantity(currentRow[ITEM], quantityConvert);
                     }
@@ -106,7 +94,6 @@ public class InventoryDB {
                     }
                     if(!currentRow[COST_PER_OZ].equals("")){
                         //creates cost node for selected item
-                        String test = currentRow[COST_PER_OZ];
                         double costConvert = Double.parseDouble(currentRow[COST_PER_OZ]);
                         insertCost(currentRow[ITEM], costConvert);
                     }
@@ -124,8 +111,6 @@ public class InventoryDB {
     public void readPriceList(){
         String line = "";  
         String splitBy = ",";  
-        int row = 0;
-        int col = 0;
 
         try   
         {  

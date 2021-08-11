@@ -3,40 +3,20 @@ package barManagement;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.*;
-import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
-import javax.swing.JSlider;
-import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import java.time.LocalDate;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import java.time.LocalDate;
-import java.util.Date;
-import java.time.Instant;
-import java.time.ZoneId;
-import java.text.SimpleDateFormat;
-import java.text.DateFormat;
-import java.util.ArrayList;
-import java.awt.Color;
 import java.awt.FlowLayout;
 import java.text.NumberFormat;
-import java.awt.Font;
 import javax.swing.DefaultComboBoxModel;
 
 /**
@@ -68,19 +48,16 @@ public class ProcessOrders implements Runnable, ActionListener, ItemListener{
         };
     private JRadioButton[] paymentButtons;
 
-    private JButton btnShowOrder, btnProcess, btnSubmit, btnCancel, btnClear;
+    private JButton btnShowOrder, btnSubmit, btnCancel, btnClear;
 
     private static OrderDB orderDB;
-    private static StringBuilder appendOrder;
-    private static String currentOrder;
-    private static String currentTotal;
-    private static boolean paid;
+
+      private static boolean paid;
 
     @Override
     public void run() {
         //button and combo box dimensions
         Dimension cbDimension = new Dimension(150,25);
-        Dimension btnDimension = new Dimension(140,25);
 
         JFrame.setDefaultLookAndFeelDecorated(true);
         frame = new JFrame("Process Orders");
@@ -237,7 +214,6 @@ public class ProcessOrders implements Runnable, ActionListener, ItemListener{
         }else if(e.getActionCommand().equals("Submit Payment")){
             String option = "";
 
-            String testval = payOptions[0];
             if(!paymentButtons[0].isSelected()){
                 paid = true;
                 for (int size = 1; size < payOptions.length; size++) {

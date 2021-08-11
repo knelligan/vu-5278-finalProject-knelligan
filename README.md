@@ -36,9 +36,10 @@ The program was created in Eclipse and runs by clicking "Run Main" on the src fo
 
 ## To Do
 - [ ] create an authentication/login
+- [ ] create a reporting window to print sales, costs, and other stats
 - [ ] include a command pattern design for the GUI controls
 - [ ] create tests and sample data
-- [x] add an inventory system using jtable
+- [x] add an inventory system 
 - [x] add an "export to csv" feature (overwrites inventory csv automatically)
 - [x] get user controls to function properly
 

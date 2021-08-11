@@ -3,40 +3,27 @@ package barManagement;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.*;
-import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
-import javax.swing.JSlider;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import java.time.LocalDate;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import java.time.LocalDate;
 import java.util.Date;
-import java.time.Instant;
-import java.time.ZoneId;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.text.NumberFormat;
-import java.awt.Font;
 import javax.swing.DefaultComboBoxModel;
 /**
  * A simulator for a Bar Management order and inventory system
@@ -87,14 +74,13 @@ public class OrderPanel implements Runnable, ActionListener, ItemListener{
         };
     private JRadioButton[] paymentButtons;
 
-    private JButton btnProcess, btnOpenProcessForm, btnAdd, btnClear, btnCancel, btnUndo,btnPrint, btnAddWine, btnAddDraft, btnAddBottle, btnAddMixed, btnAddLiquor, btnAddNonAlcoholic;
+    private JButton btnOpenProcessForm, btnAdd, btnClear, btnCancel, btnPrint, btnAddWine, btnAddDraft, btnAddBottle, btnAddMixed, btnAddLiquor, btnAddNonAlcoholic;
     private JFrame frame;
 
     //instance variables
     private static String bartenderName;
     private static String customerName;
     private static int orderNumber;
-    private static boolean orderedSomething;
     //private static StringBuilder appendOrder;
     private ArrayList<String> drinkNames;
     private ArrayList<Integer> drinkQuantities;
@@ -841,11 +827,11 @@ public class OrderPanel implements Runnable, ActionListener, ItemListener{
     }
 
     public void addDrink(String drinkName, int quantity){         
-        //check inventory
 
         //update parallel arraylists that stores drink names and quantities
         drinkNames.add(drinkName);
         drinkQuantities.add(quantity);
+        
         //updatePriceTotal();
         resetMenu();
     }
@@ -866,8 +852,7 @@ public class OrderPanel implements Runnable, ActionListener, ItemListener{
 
         MixedDrink md = mixologist.getDrink();
         int i = 0;
-        int testmix = md.getMixer().size();
-        int testliq = md.getLiquor().size();
+
         while(i < md.getMixer().size() && inStock){
             NonAlcoholic component = md.getMixer().get(i);
             String drinkName = component.getName();

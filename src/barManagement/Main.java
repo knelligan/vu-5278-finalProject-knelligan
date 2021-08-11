@@ -4,8 +4,8 @@ package barManagement;
 /**
  * Write a description of class Main here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Kate Nelligan
+ * @version Spring 2021
  */
 public class Main 
 {
