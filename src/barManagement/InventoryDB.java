@@ -155,16 +155,6 @@ public class InventoryDB {
     public void updateCSV(){
         String line = "";  
         String splitBy = ",";  
-        String item = "Item";
-        String type = "Type";
-        String stockSize = "OzPerStockUnit";
-        String stockCost = "StockCost";
-        String costPerOz = "CostPerOz";
-        String onHand = "TotalOzOnHand";
-        String menuPrice = "ExtendedPrice";
-
-        int row = 0;
-        int col = 0;
 
         try   
         {  
@@ -200,6 +190,7 @@ public class InventoryDB {
                 }
 
             }  
+            br.close();
         }   
         catch (IOException e)   
         {  
@@ -228,8 +219,6 @@ public class InventoryDB {
     }
 
     public double getCurrentQuantity(String name){
-
-        String test = name +" " + quantity.get(name);
 
         //code to test
         double currentQuantity  = quantity.get(name);
@@ -332,6 +321,7 @@ public class InventoryDB {
                 }
 
             }  
+            br.close();
         }   
         catch (IOException e)   
         {  
@@ -340,6 +330,7 @@ public class InventoryDB {
 
         pw.write(builder.toString());
         pw.close();
+        
     }
 
     public String compareStock(String itemName){
