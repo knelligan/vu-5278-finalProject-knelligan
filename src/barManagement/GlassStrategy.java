@@ -62,4 +62,3 @@ class Collins implements GlassStrategy{
      return "Shot";   
     }
  }
-

@@ -90,13 +90,6 @@ public abstract class Drink{
         return str;
     }
 
-    //this abstract method should maybe get price and/or update inventory
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
 
-    }
 }
 

@@ -17,11 +17,4 @@ public class Beer extends Drink
         super(name);
         setType("Beer");
     }
-
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
-    }
 }

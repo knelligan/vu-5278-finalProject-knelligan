@@ -10,14 +10,13 @@ package barManagement;
 public class Main 
 {
     public static final OrderDB orderDB = new OrderDB();
-    //adapted from tutorial: https://www.zentut.com/java-swing/simple-login-dialog/ 
-    public static boolean enterDashboard = false;
-
+    public static final InventoryDB inventoryDB = new InventoryDB();
 
     public static void main(String[] args){
 
-        Dashboard dash = new Dashboard();
-        dash.main(orderDB);
+
+        OrderPanel orderPanel = new OrderPanel();
+        orderPanel.main(orderDB, inventoryDB);
 
     }
 

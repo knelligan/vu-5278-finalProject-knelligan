@@ -18,19 +18,19 @@ public class DrinkFactory
         }else if(name.equals("White wine")){
             newDrink = new WhiteWine(name);
         }else if(name.equals("Coke")){
-            newDrink = new NonAlcoholic(name, 2.0);
+            newDrink = new NonAlcoholic(name, 6.0, 2.0);
         }else if(name.equals("Sprite")){
-            newDrink = new NonAlcoholic(name, 2.0);
-        }else if(name.equals("Ginger ale")){
-            newDrink = new NonAlcoholic(name, 2.0);
+            newDrink = new NonAlcoholic(name, 6.0, 2.0);
+        }else if(name.equals("Ginger Ale")){
+            newDrink = new NonAlcoholic(name, 6.0, 2.0);
         }else if(name.equals("Orange Juice")){
-            newDrink = new NonAlcoholic(name, 3.0);
+            newDrink = new NonAlcoholic(name,  6.0, 3.0);
         }else if(name.equals("Cranberry Juice")){
-            newDrink = new NonAlcoholic(name, 3.0);
+            newDrink = new NonAlcoholic(name,  6.0, 3.0);
         }else if(name.equals("Pineapple Juice")){
-            newDrink = new NonAlcoholic(name, 3.0);
+            newDrink = new NonAlcoholic(name, 6.0,  3.0);
         }else if(name.equals("Lime Juice")){
-            newDrink = new NonAlcoholic(name, 3.0);
+            newDrink = new NonAlcoholic(name,  6.0, 3.0);
         }else if(name.equals("Bud Light")){
             newDrink = new BottleBeer(name, "Bud Light", 4.00);
         }else if(name.equals("Corona")){
@@ -49,21 +49,21 @@ public class DrinkFactory
             newDrink = new LargeDraft(name, "Coors Light", 7.0);
         }else if(name.equals("Large Sam Adams")){
             newDrink = new LargeDraft(name, "Samuel Adams", 8.0);
-        }else if(name.equals("Vodka Shot")){
+        }else if(name.equals("Vodka")){
             newDrink = new Liquor(name, 2.50, true);
-        }else if(name.equals("Bourbon Shot")){
+        }else if(name.equals("Bourbon")){
             newDrink = new Liquor(name, 4.00, true);
-        }else if(name.equals("Tequila Shot")){
+        }else if(name.equals("Tequila")){
             newDrink = new Liquor(name, 3.00, true); 
-        }else if(name.equals("Gin Shot")){
+        }else if(name.equals("Gin")){
             newDrink = new Liquor(name, 2.75, true);
-        }else if(name.equals("Whiskey Shot")){
+        }else if(name.equals("Whiskey")){
             newDrink = new Liquor(name, 5.00, true);
-        }else if(name.equals("Rum Shot")){
+        }else if(name.equals("Rum")){
             newDrink = new Liquor(name, 3.25, true);     
-        }else if(name.equals("Cordial Shot")){
+        }else if(name.equals("Cordial")){
             newDrink = new Liquor(name, 2.75, true);    
-        }else if(name.equals("Vermouth Shot")){
+        }else if(name.equals("Vermouth")){
             newDrink = new Liquor(name, 2.25, true);   
         }else{
             //call mixologist

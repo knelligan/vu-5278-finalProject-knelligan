@@ -3,7 +3,6 @@ package barManagement;
 public class BottleBeer extends Beer
 {
 
-
     /**
      * Constructor for objects of class Wine
      */
@@ -26,12 +25,5 @@ public class BottleBeer extends Beer
         setSize(12);
         productName = prodName;
 
-    }
-
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
     }
 }

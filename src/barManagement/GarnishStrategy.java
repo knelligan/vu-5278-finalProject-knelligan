@@ -33,4 +33,3 @@ class Olive implements GarnishStrategy{
      return "Olive";
     }
 }
-

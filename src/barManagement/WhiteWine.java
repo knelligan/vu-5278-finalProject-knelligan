@@ -23,10 +23,4 @@ public class WhiteWine extends Wine
 
     }
 
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
-    }
 }

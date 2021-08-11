@@ -8,7 +8,6 @@ package barManagement;
  * @version (a version number or a date)
  */
 public class DrinkAndQuantity{
-
     private Integer quantity;
 
     private Drink drink;
@@ -37,8 +36,8 @@ public class DrinkAndQuantity{
         // return str.toString();
         String str = "";
         str += quantity + " ";
-        str += getDrink().toString() + " ";
-        //str += "test";
+        str += getDrink().toString();
+        //str = str.substring(0, str.length() - 1);
         return str;
         
 

@@ -22,11 +22,4 @@ public class RedWine extends Wine
         setType("Red Wine");
 
     }
-
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
-    }
 }

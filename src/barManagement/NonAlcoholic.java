@@ -16,11 +16,11 @@ public class NonAlcoholic extends Drink
     /**
      * Constructor for objects of class NonAlcoholic
      */
-    public NonAlcoholic(String name, String newMenuName,double newPrice)
+    public NonAlcoholic(String name, double newSize, double newPrice)
     {
         super(name);
         setType("NonAlcoholic");
-        setSize(6.0);
+        setSize(newSize);
         glassType = new Pint();
         iceType = new Cube();
         setPrice(newPrice);
@@ -36,12 +36,5 @@ public class NonAlcoholic extends Drink
         super(name);
         setType("Non-Alcoholic");
         setSize(portionSize); 
-    }
-
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
     }
 }

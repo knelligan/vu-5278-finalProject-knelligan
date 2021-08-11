@@ -1,8 +1,10 @@
 package barManagement;
+
 import java.util.ArrayList;
+
 public class MixedDrink extends Drink implements MixedDrinkRecipe
 {
-	   //Drinks may have more than one liquor and mixer
+	  //Drinks may have more than one liquor and mixer
     private ArrayList<Liquor> liquor;
     private ArrayList<NonAlcoholic> mixer;
     private GarnishStrategy garnish;
@@ -12,6 +14,7 @@ public class MixedDrink extends Drink implements MixedDrinkRecipe
     public MixedDrink(String name)
     {
         super(name);
+                setType("Mixed Drink");
         glassType = new Pint();
         iceType = new Cube();
         setName(name);
@@ -54,13 +57,6 @@ public class MixedDrink extends Drink implements MixedDrinkRecipe
     //buildGlass
     public void setGlass(GlassStrategy newGlass){
         glassType = newGlass;
-    }
-
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
     }
 
 

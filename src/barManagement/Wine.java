@@ -20,11 +20,4 @@ public class Wine extends Drink
         setSize(5.0);
 
     }
-
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
-    }
 }

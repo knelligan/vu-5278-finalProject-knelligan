@@ -14,20 +14,16 @@ public class Liquor extends Drink
         setType("Liquor Shot");
         setName(name);
         setSize(1.5);
+        setPrice(price);
 
     }
-    
+
     public Liquor(String name, double portionSize)
     {
         super(name);
         setType("Mixed Drink");
         setName(name);
+        setSize(portionSize);
     }
-    
-    /**
-     * Updates the inventory
-     */
-    public void updateInventory(String name, double size){
-        //update 
-    }
+
 }

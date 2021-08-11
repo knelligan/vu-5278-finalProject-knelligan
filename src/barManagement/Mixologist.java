@@ -2,7 +2,6 @@ package barManagement;
 
 public class Mixologist
 {
-    // instance variables - replace the example below with your own
     private MixedDrinkBuilder mdb;
 
     /**

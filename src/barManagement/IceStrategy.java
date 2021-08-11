@@ -21,4 +21,3 @@ class Strained implements IceStrategy{
      return "Strain ice out";   
     }
 }
-

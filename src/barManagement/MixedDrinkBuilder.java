@@ -22,16 +22,16 @@ public class MixedDrinkBuilder implements DrinkBuilder
 
         if(name.equals("Gin Martini")){
 
-            buildLiquor("Gin Shot", 2.0);
-            buildLiquor("Vermouth Shot", 1.0);
+            buildLiquor("Gin", 2.0);
+            buildLiquor("Vermouth", 1.0);
             buildGarnish(garnish = new Olive());
             buildIce(ice = new Strained());
             buildGlass(glass = new Martini());
             buildPrice(10.99);
             buildSize(3.0);
         }else if(name.equals("Frozen Margarita")){
-            buildLiquor("Tequila Shot", 2.0);
-            buildLiquor("Cordial Shot", 1.0);
+            buildLiquor("Tequila", 2.0);
+            buildLiquor("Cordial", 1.0);
             buildMixer("Lime Juice", 1.0);
             buildGarnish(garnish = new Lime());
             buildIce(ice = new Frozen());
@@ -39,7 +39,7 @@ public class MixedDrinkBuilder implements DrinkBuilder
             buildPrice(9.99);
             buildSize(4.0);
         }else if(name.equals("Baybreeze")){
-            buildLiquor("Rum Shot", 2.0);
+            buildLiquor("Rum", 2.0);
             buildMixer("Pineapple Juice", 2.0);
             buildMixer("Cranberry Juice", 2.0);
             buildGarnish(garnish = new Umbrella());
@@ -48,25 +48,25 @@ public class MixedDrinkBuilder implements DrinkBuilder
             buildPrice(7.99);
             buildSize(6.0);            
         }else if(name.equals("Cosmopolitan")){
-            buildLiquor("Vodka Shot", 1.5);
-            buildLiquor("Cordial Shot", 1.0);
+            buildLiquor("Vodka", 1.5);
+            buildLiquor("Cordial", 1.0);
             buildMixer("Cranberry Juice", .5);
-            buildMixer("Lime", .5);
+            buildMixer("Lime Juice", .5);
             buildGarnish(garnish = new Lemon());
             buildIce(ice = new Strained());
             buildGlass(glass = new Martini());
             buildPrice(10.99);
             buildSize(3.5);            
         }else if(name.equals("Bourbon Manhattan")){
-            buildLiquor("Bourbon Shot", 2.0);
-            buildLiquor("Vermouth Shot", 1.0);
+            buildLiquor("Bourbon", 2.0);
+            buildLiquor("Vermouth", 1.0);
             buildGarnish(garnish = new Cherry());
             buildIce(ice = new Strained());
             buildGlass(glass = new Martini());
             buildPrice(11.99);
             buildSize(3.0);
         }else if(name.equals("Rum and Coke")){
-            buildLiquor("Rum Shot", 1.5);
+            buildLiquor("Rum", 1.5);
             buildMixer("Coke", 3.0);
             buildGarnish(garnish = new Lime());
             buildIce(ice = new Cube());
@@ -114,3 +114,4 @@ public class MixedDrinkBuilder implements DrinkBuilder
         return mixedDrink;
     }
 }
+
