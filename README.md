@@ -24,7 +24,7 @@ The program was created in Eclipse and runs by clicking "Run Main" on the src fo
 
 * If an customer does not pay when the drinks are ordered the bartender has the option to retrieve orders based on order number. This is accomplished by clicking the **Process Orders** button which opens up a new window. 
 
-*The combo box at the top of this window stores any order with an open tab. It is dynamically set so that after a payment is made, it is no longer selectable from the combo box. When no open orders exist, the combo box says "No orders".  To process payment, select the order from the combo box and click the **Display Order** button. Then click on the appropriate radio button for payment (cash or credit). After the payment method is selected, click **Submit Payment** to complete the payment process.
+* The combo box at the top of this window stores any order with an open tab. It is dynamically set so that after a payment is made, it is no longer selectable from the combo box. When no open orders exist, the combo box says "No orders".  To process payment, select the order from the combo box and click the **Display Order** button. Then click on the appropriate radio button for payment (cash or credit). After the payment method is selected, click **Submit Payment** to complete the payment process.
 
 * After an order is submitted, the bartender name and customer name will be cleared as well as the current order text field.  The user will need to enter new bartender/customer names to process the next order.
 
