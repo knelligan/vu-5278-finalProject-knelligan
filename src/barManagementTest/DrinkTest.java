@@ -222,7 +222,6 @@ class DrinkTest {
 		InventoryDB idb = new InventoryDB();
 		Order ord = new Order(orderNum, bartenderName, customerName, date, drinkList, quantities, idb);
 		
-		
 		//check order info
 		int ordNumTest = ord.getOrderNumber();
 		assertTrue(ordNumTest == 15);
@@ -239,7 +238,20 @@ class DrinkTest {
 		boolean paidTest = ord.getPayment();
 		assertTrue(paidTest==false);
 		
+		//check drinks
+		ArrayList<DrinkAndQuantity> dq = ord.getDrinks();
 		
+		Drink redWine = dq.get(0).getDrink();
+		assertTrue(redWine.getName().equals("Red wine"));
+		assertTrue(dq.get(0).getQuantity() == 1);
+		
+		Drink coke = dq.get(1).getDrink();
+		assertTrue(coke.getName().equals("Coke"));
+		assertTrue(dq.get(1).getQuantity() == 2);
+		
+		Drink vermouth = dq.get(24).getDrink();
+		assertTrue(vermouth.getName().equals("Vermouth"));
+		assertTrue(dq.get(24).getQuantity() == 25);
 		
 	}
 
