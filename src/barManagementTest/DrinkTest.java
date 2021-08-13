@@ -10,8 +10,10 @@ import barManagement.DrinkAndQuantity;
 import barManagement.DrinkFactory;
 import barManagement.InventoryDB;
 import barManagement.Order;
+import barManagement.OrderDB;
 
 import java.util.Date;
+import java.util.Map;
 
 class DrinkTest {
 
@@ -256,6 +258,82 @@ class DrinkTest {
 
 	@Test
 	void testOrderDB() {
+		// create drink array
+		ArrayList<String> drinkList = new ArrayList<String>();
+		drinkList.add("Red wine");
+		drinkList.add("Coke");
 
+		// create quantity array
+		ArrayList<Integer> quantities = new ArrayList<Integer>();
+		quantities.add(3);
+		quantities.add(4);
+
+		// create first order
+		Integer orderNum1 = 1;
+		String bartenderName = "Ken";
+		String customerName = "Kate";
+		Date date = new Date();
+		InventoryDB idb = new InventoryDB();
+		Order ord1 = new Order(orderNum1, bartenderName, customerName, date, drinkList, quantities, idb);
+
+		// create drink array------------------------------------------------
+		drinkList = new ArrayList<String>();
+
+		drinkList.add("Rum");
+		drinkList.add("Ginger Ale");
+
+
+		// create quantity array
+		quantities = new ArrayList<Integer>();
+		quantities.add(13);
+		quantities.add(42);
+
+		// create second order
+		Integer orderNum2 = 2;
+		bartenderName = "Ken";
+		customerName = "Steve";
+		Order ord2 = new Order(orderNum2, bartenderName, customerName, date, drinkList, quantities, idb);
+
+		// create drink array-----------------------------------------------
+		drinkList = new ArrayList<String>();
+
+		drinkList.add("Cranberry Juice");
+		drinkList.add("Large Sam Adams");
+
+		// create quantity array
+		quantities = new ArrayList<Integer>();
+		quantities.add(5);
+		quantities.add(6);
+
+		// create third order
+		Integer orderNum3 = 3;
+		bartenderName = "Ken";
+		customerName = "Dan";
+		Order ord3 = new Order(orderNum3, bartenderName, customerName, date, drinkList, quantities, idb);
+
+		
+		//create database
+		OrderDB odb = new OrderDB();
+		
+		//test insert
+		odb.insert(orderNum1, ord1);
+		odb.insert(orderNum2, ord2);
+		odb.insert(orderNum3, ord3);
+		
+
+		assertTrue(odb.contains(1));
+		assertTrue(odb.contains(2));
+		assertTrue(odb.contains(3));
+		
+		//test remove
+		odb.delete(2);
+		assertFalse(odb.contains(2));	
+		odb.delete(3);
+		assertFalse(odb.contains(3));	
+		
+		//test contains
+		assertFalse(odb.contains(4));			
 	}
+	
+
 }

@@ -43,7 +43,8 @@ The tests can be run from the src/barManagementTest package.
 ## To Do
 - [ ] create an authentication/login
 - [ ] create a reporting gui window to print sales, costs, and other stats based on the order database and the inventory database
-- [ ] include a command design pattern for the GUI controls
+- [ ] include a command design pattern for the menu buttons
+- [ ] include a MVC design pattern for the GUI controls
 - [ ] include a observer design pattern to update the prices of drinks from the drink list csv file.
 - [x] create tests and sample data
 - [x] add an inventory system 

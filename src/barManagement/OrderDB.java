@@ -77,17 +77,7 @@ public class OrderDB
     }
 
     public String[] getOpenOrders(){
-        // ArrayList<Order> orderAL = orderStorage.values().stream()
-        // .filter(val ->!val.getPayment())
-        // .map(ord ->(Order)(ord))
-        // .collect(Collectors.toCollection(ArrayList::new));
 
-        // ArrayList<String> orderAL = orderStorage.values().stream()
-        // .filter(val ->!val.getPayment())
-        // .map(ord -> ord.getCustomerName())
-        // .collect(Collectors.toCollection(ArrayList::new));
-
-        // String[] openOrders = orderAL.toArray();
         int count = 0;
         for(Map.Entry<Integer,Order> entry: orderStorage.entrySet()) {
             Integer key = entry.getKey();
@@ -114,4 +104,14 @@ public class OrderDB
     public void printAll(){
         orderStorage.forEach((key, value) -> System.out.println(value));
     }
+
+	/**
+	 * @return the orderStorage
+	 */
+	public TreeMap<Integer, Order> getOrderStorage() {
+		return orderStorage;
+	}
+	
+
+    
 }

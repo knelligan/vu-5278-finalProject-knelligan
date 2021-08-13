@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author katen
+ * @author Kate Nelligan
  *
  */
 package barManagement;
