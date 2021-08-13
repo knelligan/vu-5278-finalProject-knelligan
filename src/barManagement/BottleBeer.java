@@ -26,4 +26,13 @@ public class BottleBeer extends Beer
         productName = prodName;
 
     }
+    @Override
+	public String getProductName() {
+		return productName;
+	}
+    
+    @Override
+	public void setProductName(String newProduct) {
+		productName = newProduct;
+	}
 }

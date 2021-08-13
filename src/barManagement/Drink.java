@@ -12,12 +12,16 @@ public abstract class Drink{
     private String type;
     private double size;
     private double price;
+    private String productName;
 
     /** Ice type for drink */
     protected IceStrategy iceType;
 
     /** Glass type for drink*/
     protected GlassStrategy glassType;
+    
+    /** Garnish type for drink*/
+    protected GarnishStrategy garnishType;
 
     /**
      * Creates a drink object
@@ -35,6 +39,10 @@ public abstract class Drink{
 
     public String getGlass(){
         return glassType.glass();   
+    }
+    
+    public String getGarnish(){
+        return garnishType.garnish();   
     }
 
     public void setIce(IceStrategy newIceType){
@@ -76,6 +84,13 @@ public abstract class Drink{
     public void setType(String newType){
         type = newType;   
     }
+    
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String newProduct) {
+		productName = newProduct;
+	}
     
     @Override
     public String toString(){

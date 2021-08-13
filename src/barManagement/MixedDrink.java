@@ -30,8 +30,14 @@ public class MixedDrink extends Drink implements MixedDrinkRecipe
         return mixer;
     }
     //buildGarnish
-    public GarnishStrategy getGarnish(){
-        return garnish;
+    //public String getGarnish(){
+    //    return garnish.getGarnish();
+    //}
+    
+    //getGarnish
+    @Override
+    public String getGarnish(){
+        return garnish.garnish();
     }
 
     //don't need other methods they are in main interface
