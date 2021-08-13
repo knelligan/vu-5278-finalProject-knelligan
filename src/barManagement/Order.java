@@ -129,7 +129,7 @@ public class Order
     }
 
     /**
-     * Method gets the customer name
+     * Method gets the bartender name
      *
      */
     public String getBartenderName()

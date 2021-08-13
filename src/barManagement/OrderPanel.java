@@ -117,11 +117,6 @@ public class OrderPanel implements Runnable, ActionListener, ItemListener{
         //shows the current order and information
 
         JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        // String orderLabelInfo = "Order Information";
-        // JLabel lbOrderInfo = new JLabel(orderLabelInfo);
-        // lbOrderInfo.setFont(new Font("Calibri", Font.BOLD, 20));
-        // lbOrderInfo.setLayout(new FlowLayout(FlowLayout.CENTER));
-        // statusPanel.add(lbOrderInfo);
 
         JLabel current = new JLabel("Current Order:");
         statusPanel.add(current);

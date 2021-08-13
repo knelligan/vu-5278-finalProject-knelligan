@@ -5,7 +5,9 @@ Bar Management is a Java program that functions as an ordering system for a bar.
 
 ## Running the Program
 
-The program was created in Eclipse and runs by clicking "Run Main" on the src folder.
+The program was created in Eclipse and runs by clicking "Run Main" on the src/barManagement package.
+
+The tests can be run from the src/barManagementTest package.
 
 ## Usage
 
@@ -28,8 +30,9 @@ The program was created in Eclipse and runs by clicking "Run Main" on the src fo
 
 * After an order is submitted, the bartender name and customer name will be cleared as well as the current order text field.  The user will need to enter new bartender/customer names to process the next order.
 
-
 * Click close program to end the program.
+
+* Note: the "inventory2.csv" file is created as output and is overwritten each time a drink is successfully ordered. In a final version of this, I would overwrite the original inventory.csv file that the program draws from.
 
 
 
@@ -38,7 +41,7 @@ The program was created in Eclipse and runs by clicking "Run Main" on the src fo
 - [ ] create an authentication/login
 - [ ] create a reporting window to print sales, costs, and other stats
 - [ ] include a command pattern design for the GUI controls
-- [ ] create tests and sample data
+- [x] create tests and sample data
 - [x] add an inventory system 
 - [x] add an "export to csv" feature (overwrites inventory csv automatically)
 - [x] get user controls to function properly
