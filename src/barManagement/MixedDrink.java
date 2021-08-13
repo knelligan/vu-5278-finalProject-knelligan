@@ -40,10 +40,6 @@ public class MixedDrink extends Drink implements MixedDrinkRecipe
         return garnish.garnish();
     }
 
-    //don't need other methods they are in main interface
-
-
-
     //buildLiquor
     public void setLiquor(Liquor newLiquor){
         liquor.add(newLiquor);
@@ -64,6 +60,42 @@ public class MixedDrink extends Drink implements MixedDrinkRecipe
     public void setGlass(GlassStrategy newGlass){
         glassType = newGlass;
     }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((garnish == null) ? 0 : garnish.hashCode());
+		result = prime * result + ((liquor == null) ? 0 : liquor.hashCode());
+		result = prime * result + ((mixer == null) ? 0 : mixer.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MixedDrink other = (MixedDrink) obj;
+		if (garnish == null) {
+			if (other.garnish != null)
+				return false;
+		} else if (!garnish.equals(other.garnish))
+			return false;
+		if (liquor == null) {
+			if (other.liquor != null)
+				return false;
+		} else if (!liquor.equals(other.liquor))
+			return false;
+		if (mixer == null) {
+			if (other.mixer != null)
+				return false;
+		} else if (!mixer.equals(other.mixer))
+			return false;
+		return true;
+	}
 
+    
 
 }

@@ -87,7 +87,7 @@ class DrinkTest {
 		// test product
 		assertTrue(testGuiness.getProductName().equals("Guiness"));
 
-		// test Large Coors Light draft drink------------------------
+		// test large coors light draft drink------------------------
 		Drink testCoors = df.makeDrink(drinks.get(15));
 
 		// test name
@@ -139,15 +139,14 @@ class DrinkTest {
 
 		return drinkNames;
 	}
-	
+
 	ArrayList<Integer> createIntegerArray() {
 
 		ArrayList<Integer> drinkNumbers = new ArrayList<Integer>();
 
-		for(int i = 1; i <= 25; i++ ) {
+		for (int i = 1; i <= 25; i++) {
 			drinkNumbers.add(i);
 		}
-		
 
 		return drinkNumbers;
 	}
@@ -212,47 +211,47 @@ class DrinkTest {
 
 	@Test
 	void testOrder() {
-		//set up order
+		// set up order
 		Integer orderNum = 15;
 		String bartenderName = "Ken";
 		String customerName = "Kate";
 		Date date = new Date();
 		ArrayList<String> drinkList = createDrinkArray();
-		ArrayList<Integer>quantities = createIntegerArray();
+		ArrayList<Integer> quantities = createIntegerArray();
 		InventoryDB idb = new InventoryDB();
 		Order ord = new Order(orderNum, bartenderName, customerName, date, drinkList, quantities, idb);
-		
-		//check order info
+
+		// check order info
 		int ordNumTest = ord.getOrderNumber();
 		assertTrue(ordNumTest == 15);
-		
-		//check bartender info
+
+		// check bartender info
 		String bartenderNameTest = ord.getBartenderName();
 		assertTrue(bartenderNameTest.equals("Ken"));
-		
-		//check customer info
+
+		// check customer info
 		String customerNameTest = ord.getCustomerName();
 		assertTrue(customerNameTest.equals("Kate"));
-		
-		//check payment info
+
+		// check payment info
 		boolean paidTest = ord.getPayment();
-		assertTrue(paidTest==false);
-		
-		//check drinks
+		assertTrue(paidTest == false);
+
+		// check drinks
 		ArrayList<DrinkAndQuantity> dq = ord.getDrinks();
-		
+
 		Drink redWine = dq.get(0).getDrink();
 		assertTrue(redWine.getName().equals("Red wine"));
 		assertTrue(dq.get(0).getQuantity() == 1);
-		
+
 		Drink coke = dq.get(1).getDrink();
 		assertTrue(coke.getName().equals("Coke"));
 		assertTrue(dq.get(1).getQuantity() == 2);
-		
+
 		Drink vermouth = dq.get(24).getDrink();
 		assertTrue(vermouth.getName().equals("Vermouth"));
 		assertTrue(dq.get(24).getQuantity() == 25);
-		
+
 	}
 
 	@Test

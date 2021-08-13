@@ -247,4 +247,71 @@ public class Order
 
         return total;
     }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bartenderName == null) ? 0 : bartenderName.hashCode());
+		result = prime * result + ((customerName == null) ? 0 : customerName.hashCode());
+		result = prime * result + ((date == null) ? 0 : date.hashCode());
+		result = prime * result + ((drinksAndQuantities == null) ? 0 : drinksAndQuantities.hashCode());
+		result = prime * result + ((orderNum == null) ? 0 : orderNum.hashCode());
+		result = prime * result + (paid ? 1231 : 1237);
+		result = prime * result + ((paymentType == null) ? 0 : paymentType.hashCode());
+		result = prime * result + ((totalPrice == null) ? 0 : totalPrice.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Order other = (Order) obj;
+		if (bartenderName == null) {
+			if (other.bartenderName != null)
+				return false;
+		} else if (!bartenderName.equals(other.bartenderName))
+			return false;
+		if (customerName == null) {
+			if (other.customerName != null)
+				return false;
+		} else if (!customerName.equals(other.customerName))
+			return false;
+		if (date == null) {
+			if (other.date != null)
+				return false;
+		} else if (!date.equals(other.date))
+			return false;
+		if (drinksAndQuantities == null) {
+			if (other.drinksAndQuantities != null)
+				return false;
+		} else if (!drinksAndQuantities.equals(other.drinksAndQuantities))
+			return false;
+		if (orderNum == null) {
+			if (other.orderNum != null)
+				return false;
+		} else if (!orderNum.equals(other.orderNum))
+			return false;
+		if (paid != other.paid)
+			return false;
+		if (paymentType == null) {
+			if (other.paymentType != null)
+				return false;
+		} else if (!paymentType.equals(other.paymentType))
+			return false;
+		if (totalPrice == null) {
+			if (other.totalPrice != null)
+				return false;
+		} else if (!totalPrice.equals(other.totalPrice))
+			return false;
+		return true;
+	}
+    
+    
+    
 }
